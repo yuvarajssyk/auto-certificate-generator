@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ------------------- USER CONFIG -------------------
 EXCEL_PATH    = r"data\datas.xlsx"       # Excel with student data
-TEMPLATE_PATH = r"images\cretificate_template.jpg"           # New certificate template
+TEMPLATE_PATH = r"images/cretificate_template.png"           # New certificate template
 SIGN1_PATH    = r"images/sign_1.png"     # Executive Director
 SIGN2_PATH    = r"images/sign_2.png"     # BCT Director
 OUTPUT_DIR    = "certificates"
@@ -126,3 +126,4 @@ def make_certificates():
 
 if __name__ == "__main__":
     make_certificates()
+
