@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Certificate Generator</h1>
+
+    <form method="POST">
+      <input type="text" name="name" placeholder="Enter Name" required>
+      <input type="text" name="course" placeholder="Enter Course" required>
+      <input type="date" name="start_date" required>
+      <input type="date" name="end_date" required>
+      <button type="submit">Generate Certificate</button>
+    </form>
+
+    {% if cert_url %}
+      <h2>Certificate Generated Successfully!</h2>
+      <a href="{{ cert_url }}" target="_blank">
+        <button class="view-btn">View Certificate</button>
+      </a>
+    {% endif %}
+  </div>
+</body>
+</html>
